@@ -2,10 +2,12 @@ package com.example.quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,6 +71,20 @@ public class MainActivity extends AppCompatActivity {
                 react.setBackgroundResource(R.drawable.round_back_white10);
                 unity.setBackgroundResource(R.drawable.round_back_white10);
                 java.setBackgroundResource(R.drawable.round_back_white10);
+            }
+        });
+
+        startBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (sujetChoisi.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Choisissez votre sujet", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Intent intent = new Intent(MainActivity.this, QuizActivity.class);
+                    intent.putExtra("SujetChoisi", sujetChoisi);
+                    startActivity(intent);
+                }
             }
         });
     }
