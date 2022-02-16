@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0D1F6BB8"
+    android:background="@drawable/background_v3"
     tools:context=".QuizActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#1f6bb8">
+        >
 
         <ImageView
             android:id="@+id/retourBtn"
@@ -55,4 +55,89 @@
                 android:textColor="#FAA72F"/>
         </LinearLayout>
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/nbQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round_back_question_marker10"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="1/10"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="-20dp"
+        android:background="@drawable/round_backgroud_yellow10"
+        android:gravity="center"
+        android:minHeight="100dp"
+        android:text="La question va apparaître ici"
+        android:padding="20dp"
+        android:textColor="#cc000000"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Option 1"
+        android:background="@drawable/round_back_white_stroke2_10"
+        android:textAllCaps="false"
+        android:layout_marginEnd="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Option 2"
+        android:background="@drawable/round_back_white_stroke2_10"
+        android:textAllCaps="false"
+        android:layout_marginEnd="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Option 3"
+        android:background="@drawable/round_back_white_stroke2_10"
+        android:textAllCaps="false"
+        android:layout_marginEnd="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Option 4"
+        android:background="@drawable/round_back_white_stroke2_10"
+        android:textAllCaps="false"
+        android:layout_marginEnd="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Prochaine question"
+        android:background="@drawable/round_back_btn10"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="20dp"/>
 </LinearLayout>

@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background_v4"
+    android:background="@drawable/background_v3"
     tools:context=".MainActivity">
 
-    <ImageView
+  <!--  <ImageView
         android:id="@+id/quizLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,18 +16,39 @@
         android:layout_marginStart="80dp"
         android:layout_marginEnd="80dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/quiz_logo_v3" />
+        android:src="@drawable/quiz_logo_v3" /> -->
+    <TextView
+        android:id="@+id/quizLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="40dp"
+        android:textColor="#FFFFFF"
+        android:text="Bonjour"
+        android:textSize="45dp"
+        />
+
+    <TextView
+        android:id="@+id/nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="30dp"
+        android:text="nom"
+        android:textColor="#FFFFFF"
+        android:textSize="35dp" />
 
     <TextView
         android:id="@+id/SujetChoisi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_below="@id/quizLogo"
+        android:layout_marginTop="130dp"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="20dp"
-        android:textColor="#99FFFFFF"
-        android:text="Choisi ton sujet"/>
+        android:layout_marginEnd="30dp"
+        android:textColor="#FFFFFF"
+        android:text="Choisi ton sujet"
+        android:textSize="50dp"/>
 
     <LinearLayout
         android:id="@+id/layout1"
@@ -35,7 +56,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/SujetChoisi"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:weightSum="2">
