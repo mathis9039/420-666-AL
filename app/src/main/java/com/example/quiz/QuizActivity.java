@@ -6,6 +6,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Trace;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,14 +21,14 @@ public class QuizActivity extends AppCompatActivity {
     private TextView nbquestion;
     private TextView question;
 
-    private AppCompatButton option1, option2, option3, option4, next;
+    private AppCompatButton option1, option2, option3, option4, nextBtn;
 
     private Timer quizTimer;
 
     private int timeInMinute = 1;
     private int seconds = 0;
 
-    private final List<QuestionList> questionLists = new ArrayList<>();
+    private  List<QuestionList> questionLists;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +47,58 @@ public class QuizActivity extends AppCompatActivity {
         option3 = findViewById(R.id.option3);
         option4 = findViewById(R.id.option4);
 
-        next = findViewById(R.id.nextBtn);
+        nextBtn = findViewById(R.id.nextBtn);
         final String getSujetChoisi = getIntent().getStringExtra("SujetChoisi");
 
         nomSujet.setText(getSujetChoisi);
 
         startTimer(timer);
+
+        option1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        option3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        option4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        retourBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                quizTimer.purge();
+                quizTimer.cancel();
+
+                startActivity(new Intent(QuizActivity.this, MainActivity.class));
+                finish();
+            }
+        });
     }
 
     private void startTimer(TextView timerTextView){
@@ -101,7 +148,7 @@ public class QuizActivity extends AppCompatActivity {
     private int getCorrectAnswers(){
         int correctAnswers = 0;
 
-        for (int i; i<questionLists.size(); i++){
+        for (int i = 0; i < questionLists.size(); i++){
             final String getUserGuess = questionLists.get(i).getReponseUser();
             final String getAnswer = questionLists.get(i).getAnswer();
 
@@ -115,7 +162,7 @@ public class QuizActivity extends AppCompatActivity {
     private int getIncorrectAnswers(){
         int incorrectAnswers = 0;
 
-        for (int i; i<questionLists.size(); i++){
+        for (int i = 0; i < questionLists.size(); i++){
             final String getUserGuess = questionLists.get(i).getReponseUser();
             final String getAnswer = questionLists.get(i).getAnswer();
 
@@ -124,5 +171,14 @@ public class QuizActivity extends AppCompatActivity {
             }
         }
         return incorrectAnswers;
+    }
+
+    @Override
+    public void onBackPressed(){
+        quizTimer.purge();
+        quizTimer.cancel();
+
+        startActivity(new Intent(QuizActivity.this, MainActivity.class));
+        finish();
     }
 }
