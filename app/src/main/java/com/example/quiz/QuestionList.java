@@ -44,4 +44,8 @@ public class QuestionList {
     public String getAnswer() {
         return answer;
     }
+
+    public void setReponseUser(String reponseUser) {
+        this.reponseUser = reponseUser;
+    }
 }

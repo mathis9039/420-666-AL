@@ -34,7 +34,7 @@ public class Questions {
         final QuestionList question1 = new QuestionList("Que veut dire HTML?", "Hyper Text Markup Language", "High Text Markup Language", "Hyper Tabular Markup Language", "Aucune de ces réponses", "Hyper Text Markup Language");
         final QuestionList question2 = new QuestionList("Quelle balise utilise-t'on pour déclarer un paragraphe?", "<TD>", "<br>", "<P>", "<TR>", "<P>");
         final QuestionList question3 = new QuestionList("Quelle balise utilise-t'on pour déclarer une liste descriptive?", "<LL>", "<DD>", "<DL>", "<DS>", "<DL>");
-        final QuestionList question4 = new QuestionList("Quelle balise utilise-t'on pour déclarer le plus gros titre", "<head>", "<large>", "<h6>", "<heading>", "<h1>");
+        final QuestionList question4 = new QuestionList("Quelle balise utilise-t'on pour déclarer le plus gros titre", "<head>", "<h1>", "<h6>", "<heading>", "<h1>");
         final QuestionList question5 = new QuestionList("La balise HTML qui spécifie un style CSS intégré dans un élément est appelée", "Design", "Style", "src", "Define", "Style");
         final QuestionList question6 = new QuestionList("HTML est considéré comme", "Langage de programmation", "Langage POO", "Le language le plus puissant sur Terre", "Langage de balisage", "Langage de balisage");
 
