@@ -32,7 +32,7 @@ public class Questions {
         final List<QuestionList> questionsLists = new ArrayList<>();
 
         final QuestionList question1 = new QuestionList("Que veut dire HTML?", "Hyper Text Markup Language", "High Text Markup Language", "Hyper Tabular Markup Language", "Aucune de ces réponses", "Hyper Text Markup Language");
-        final QuestionList question2 = new QuestionList("Quelle balise utilise-t'on pour déclarer un paragraphe?", "<TD>", "<br>", "<P>", "<TR>", "<P>");
+        final QuestionList question2 = new QuestionList("Quelle balise utilise-t'on pour déclarer un paragraphe?", "<td>", "<br>", "<p>", "<tr>", "<P>");
         final QuestionList question3 = new QuestionList("Quelle balise utilise-t'on pour déclarer une liste descriptive?", "<LL>", "<DD>", "<DL>", "<DS>", "<DL>");
         final QuestionList question4 = new QuestionList("Quelle balise utilise-t'on pour déclarer le plus gros titre", "<head>", "<h1>", "<h6>", "<heading>", "<h1>");
         final QuestionList question5 = new QuestionList("La balise HTML qui spécifie un style CSS intégré dans un élément est appelée", "Design", "Style", "src", "Define", "Style");
