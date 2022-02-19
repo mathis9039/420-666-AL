@@ -52,12 +52,12 @@ public class Questions {
 
         final List<QuestionList> questionsLists = new ArrayList<>();
 
-        final QuestionList question1 = new QuestionList("?", "", "", "", "", "");
-        final QuestionList question2 = new QuestionList("?", "", "", "", "", "");
-        final QuestionList question3 = new QuestionList("?", "", "", "", "", "");
-        final QuestionList question4 = new QuestionList("?", "", "", "", "", "");
-        final QuestionList question5 = new QuestionList("?", "", "", "", "", "");
-        final QuestionList question6 = new QuestionList("?", "", "", "", "", "");
+        final QuestionList question1 = new QuestionList("Lequel des éléments suivants agit comme l'entrée d'un composant basé sur une classe?", "Class", "Factory", "Render", "Props", "Props");
+        final QuestionList question2 = new QuestionList("Quel est le port par défaut sur lequel Webpack-server s'exécute?", "1234", "8080", "6060", "3030", "8080");
+        final QuestionList question3 = new QuestionList("Laquelle des méthodes suivantes fait référence à la classe parent dans React.js?", "inherits()", "self()", "super()", "this()", "super()");
+        final QuestionList question4 = new QuestionList("Lequel des éléments suivants est une API incontournable pour chaque composant React.js?", "SetinitialComponent", "renderComponent", "render", "Aucune des réponses", "renderComponent");
+        final QuestionList question5 = new QuestionList("Combien d'éléments un composant de React.js valide peut renvoyer?", "1", "2", "5", "10", "1");
+        final QuestionList question6 = new QuestionList("Laquelle des commandes suivantes est utilisée pour installer create-react-app?", "npm install -g create-react-app", "install -g create-react-app", "npm install -f create-react-app", "npm install create-react-app", "npm install -g create-react-app");
 
 
         questionsLists.add(question1);
@@ -74,12 +74,12 @@ public class Questions {
 
         final List<QuestionList> questionsLists = new ArrayList<>();
 
-        final QuestionList question1 = new QuestionList("?", "", "", "", "", "");
-        final QuestionList question2 = new QuestionList("?", "", "", "", "", "");
-        final QuestionList question3 = new QuestionList("?", "", "", "", "", "");
-        final QuestionList question4 = new QuestionList("?", "", "", "", "", "");
-        final QuestionList question5 = new QuestionList("?", "", "", "", "", "");
-        final QuestionList question6 = new QuestionList("?", "", "", "", "", "");
+        final QuestionList question1 = new QuestionList("Un matériau physique avec une valeur de frottement de 0 donnerait l'impression d'être sur...?", "du sable", "de la glace", "de la roche", "de la gravel", "de la glace");
+        final QuestionList question2 = new QuestionList("Qu'est ce qu'un GameObject?", "Un objet présent dans une scène", "Un élement de UI", "Un modèle 3D", "Un fichier", "Un objet présent dans une scène");
+        final QuestionList question3 = new QuestionList("Quel est le nom du component ajouté automatiquement et toujours présent?", "Transform", "Collider", "ScriptGenerator", "C#", "Transform");
+        final QuestionList question4 = new QuestionList("Que veut dire: destroy(GameObject.Find('Player'), 3f); ?", "Il désactive l'objet Player après 3 secondes", "Il supprime l'objet Player après 3 secondes", "Il efface la scène où se trouve l'objet Player", "Aucune des réponses", "Il supprime l'objet Player après 3 secondes");
+        final QuestionList question5 = new QuestionList("Qu'est ce qu'une prefab?", "Un modèle 3D réalisé sur Blender", "Un template", "Un type de donnée", "toutes ces réponses", "Un template");
+        final QuestionList question6 = new QuestionList("Les scripts (MonoBehaviour) peuvent-ils être ajoutés comme des components?", "Oui", "Non", "Peut-être", "Demande à François", "Oui");
 
         questionsLists.add(question1);
         questionsLists.add(question2);
