@@ -17,27 +17,7 @@
         android:layout_marginEnd="80dp"
         android:adjustViewBounds="true"
         android:src="@drawable/quiz_logo_v3" /> -->
-    <TextView
-        android:id="@+id/quizLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="40dp"
-        android:textColor="#FFFFFF"
-        android:text="Bonjour"
-        android:textSize="45dp"
-        />
 
-    <TextView
-        android:id="@+id/nom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="74dp"
-        android:text="nom"
-        android:textColor="#FFFFFF"
-        android:textSize="35dp" />
 
     <TextView
         android:id="@+id/SujetChoisi"

@@ -26,7 +26,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private Timer quizTimer;
 
-    private int timeInMinute = 1;
+    private int timeInMinute = 2;
     private int seconds = 0;
 
     private  List<QuestionList> questionLists;
