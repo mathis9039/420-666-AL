@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         final LinearLayout unity = findViewById(R.id.unityLayout);
         final LinearLayout html = findViewById(R.id.htmlLayout);
         final LinearLayout react =  findViewById(R.id.reactLayout);
+        final LinearLayout quiz =  findViewById(R.id.quizLayout);
+        final LinearLayout admin =  findViewById(R.id.amdinLayout);
 
 
         final Button startBtn = findViewById (R.id.quizStartBtn);
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
                 react.setBackgroundResource(R.drawable.round_back_white10);
                 unity.setBackgroundResource(R.drawable.round_back_white10);
                 html.setBackgroundResource(R.drawable.round_back_white10);
+                quiz.setBackgroundResource(R.drawable.round_back_white10);
+                admin.setBackgroundResource(R.drawable.round_back_white10);
             }
         });
 
@@ -47,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 java.setBackgroundResource(R.drawable.round_back_white10);
                 unity.setBackgroundResource(R.drawable.round_back_white10);
                 html.setBackgroundResource(R.drawable.round_back_white10);
+                quiz.setBackgroundResource(R.drawable.round_back_white10);
+                admin.setBackgroundResource(R.drawable.round_back_white10);
             }
         });
 
@@ -59,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
                 react.setBackgroundResource(R.drawable.round_back_white10);
                 java.setBackgroundResource(R.drawable.round_back_white10);
                 html.setBackgroundResource(R.drawable.round_back_white10);
+                quiz.setBackgroundResource(R.drawable.round_back_white10);
+                admin.setBackgroundResource(R.drawable.round_back_white10);
             }
         });
 
@@ -71,6 +79,37 @@ public class MainActivity extends AppCompatActivity {
                 react.setBackgroundResource(R.drawable.round_back_white10);
                 unity.setBackgroundResource(R.drawable.round_back_white10);
                 java.setBackgroundResource(R.drawable.round_back_white10);
+                quiz.setBackgroundResource(R.drawable.round_back_white10);
+                admin.setBackgroundResource(R.drawable.round_back_white10);
+            }
+        });
+
+        quiz.setOnClickListener (new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sujetChoisi = "quiz";
+                quiz.setBackgroundResource(R.drawable.round_back_white_stroke10);
+
+                react.setBackgroundResource(R.drawable.round_back_white10);
+                unity.setBackgroundResource(R.drawable.round_back_white10);
+                java.setBackgroundResource(R.drawable.round_back_white10);
+                html.setBackgroundResource(R.drawable.round_back_white10);
+                admin.setBackgroundResource(R.drawable.round_back_white10);
+            }
+        });
+
+        admin.setOnClickListener (new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //startActivity(new Intent(MainActivity.this, QuestionForm.class));
+                sujetChoisi = "admin";
+                admin.setBackgroundResource(R.drawable.round_back_white_stroke10);
+
+                react.setBackgroundResource(R.drawable.round_back_white10);
+                unity.setBackgroundResource(R.drawable.round_back_white10);
+                java.setBackgroundResource(R.drawable.round_back_white10);
+                html.setBackgroundResource(R.drawable.round_back_white10);
+                quiz.setBackgroundResource(R.drawable.round_back_white10);
             }
         });
 
@@ -80,7 +119,11 @@ public class MainActivity extends AppCompatActivity {
                 if (sujetChoisi.isEmpty()){
                     Toast.makeText(MainActivity.this, "Choisissez votre sujet", Toast.LENGTH_SHORT).show();
                 }
-                else{
+                else if(sujetChoisi == "admin"){
+                    Intent intent = new Intent(MainActivity.this, QuestionForm.class);
+                    //intent.putExtra("SujetChoisi", sujetChoisi);
+                    startActivity(intent);
+                }else {
                     Intent intent = new Intent(MainActivity.this, QuizActivity.class);
                     intent.putExtra("SujetChoisi", sujetChoisi);
                     startActivity(intent);
