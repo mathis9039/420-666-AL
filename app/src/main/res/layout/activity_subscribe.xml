@@ -6,109 +6,77 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background_v3"
-    tools:context=".QuestionForm">
+    tools:context=".Subscribe">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         >
 
-        <ImageView
-            android:id="@+id/retourBtn"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="15dp"
-            android:src="@drawable/back_btn" />
-
         <TextView
             android:id="@+id/nomSujet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Ajout de question"
+            android:text="Subscribe"
             android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="35sp"/>
     </RelativeLayout>
 
-    <EditText
-        android:id="@+id/question"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/round_backgroud_yellow10"
-        android:gravity="center"
-        android:minHeight="100dp"
-        android:hint="Écrire la question ici"
-        android:padding="20dp"
-        android:textColor="#cc000000"
-        android:textSize="16sp"/>
-
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/option1"
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
-        android:hint="Option 1"
+        android:layout_marginTop="200dp"
+        android:hint="Nom d'utilisateur"
         android:background="@drawable/round_back_white_stroke2_10"
         android:textAllCaps="false"
         android:layout_marginEnd="20dp"/>
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/option2"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:hint="Option 2"
+        android:hint="Courriel@exemple.ca"
+        android:inputType="textEmailAddress"
         android:background="@drawable/round_back_white_stroke2_10"
         android:textAllCaps="false"
         android:layout_marginEnd="20dp"/>
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/option3"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:hint="Option 3"
-        android:background="@drawable/round_back_white_stroke2_10"
-        android:textAllCaps="false"
-        android:layout_marginEnd="20dp"/>
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/option4"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:hint="Option 4"
-        android:background="@drawable/round_back_white_stroke2_10"
-        android:textAllCaps="false"
-        android:layout_marginEnd="20dp"/>
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/answer"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:hint="Réponse"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
         android:background="@drawable/round_back_white_stroke2_10"
         android:textAllCaps="false"
         android:layout_marginEnd="20dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/addQuestion"
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:text="Déjà un compte?"
+        android:background="@drawable/round_back_btn10"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="150dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/subscribeBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:text="ajouter la question"
+        android:layout_marginTop="20dp"
+        android:text="Inscription"
         android:background="@drawable/round_back_btn10"
         android:textAllCaps="false"
         android:textColor="#ffffff"

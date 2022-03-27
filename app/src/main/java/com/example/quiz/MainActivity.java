@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -24,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         final LinearLayout quiz =  findViewById(R.id.quizLayout);
         final LinearLayout admin =  findViewById(R.id.amdinLayout);
 
-
-        final Button startBtn = findViewById (R.id.quizStartBtn);
+        final ImageView backBtn = findViewById(R.id.retourBtn);
+        final Button startBtn = findViewById(R.id.quizStartBtn);
 
 
         java.setOnClickListener (new View.OnClickListener() {
@@ -128,6 +129,14 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("SujetChoisi", sujetChoisi);
                     startActivity(intent);
                 }
+            }
+        });
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Login.class));
+                finish();
             }
         });
     }
