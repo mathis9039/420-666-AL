@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         final LinearLayout react =  findViewById(R.id.reactLayout);
         final LinearLayout quiz =  findViewById(R.id.quizLayout);
         final LinearLayout admin =  findViewById(R.id.amdinLayout);
+        //final LinearLayout admin =  findViewById(R.id.amdinLayout);
 
         final ImageView backBtn = findViewById(R.id.retourBtn);
         final Button startBtn = findViewById(R.id.quizStartBtn);
@@ -121,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Choisissez votre sujet", Toast.LENGTH_SHORT).show();
                 }
                 else if(sujetChoisi == "admin"){
-                    Intent intent = new Intent(MainActivity.this, QuestionForm.class);
+                    Intent intent = new Intent(MainActivity.this, ValidationAdmin.class);
                     //intent.putExtra("SujetChoisi", sujetChoisi);
                     startActivity(intent);
                 }else {
