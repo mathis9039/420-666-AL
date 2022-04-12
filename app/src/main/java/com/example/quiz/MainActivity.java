@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toast.makeText(MainActivity.this, "Connexion établie", Toast.LENGTH_SHORT).show();
 
         final LinearLayout java = findViewById(R.id.javaLayout);
         final LinearLayout unity = findViewById(R.id.unityLayout);
