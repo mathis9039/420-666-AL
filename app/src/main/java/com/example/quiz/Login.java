@@ -1,5 +1,6 @@
 package com.example.quiz;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -11,10 +12,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
+
 public class Login extends AppCompatActivity {
 
     private AppCompatButton connexion, subscribe;
     private EditText password, email;
+    private FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -27,14 +35,25 @@ public class Login extends AppCompatActivity {
         password = findViewById(R.id.password);
         email = findViewById(R.id.username);
 
-
+        firebaseAuth = FirebaseAuth.getInstance();
         connexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Login.this, MainActivity.class));
-                finish();
+                if (email.getText().toString().isEmpty()){
+                    email.setError("Entrer votre courriel");
+                    return;
+                }else {
+                    email.setError(null);
+                }
+                if (password.getText().toString().isEmpty()){
+                    password.setError("Entrer votre mot de passe");
+                    return;
+                }else {
+                    password.setError(null);
+                } firebaseLogin();
             }
         });
+
 
         subscribe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,18 +62,21 @@ public class Login extends AppCompatActivity {
                 finish();
             }
         });
+    }
 
-        connexion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(TextUtils.isEmpty(password.getText().toString()) && TextUtils.isEmpty(password.getText().toString())){
-                    Toast.makeText(Login.this, "Veuillez saisir vos information", Toast.LENGTH_SHORT).show();
-                }else if(password.getText().toString().contains("admin") && email.getText().toString().contains("admin")){
-                    Toast.makeText(Login.this, "Bonjour Administrateur", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Login.this, MainActivity.class));
-                    finish();
-                }
-            }
-        });
+    private void firebaseLogin(){
+        firebaseAuth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                           Toast.makeText(Login.this, "Connexion réussi", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(Login.this, MainActivity.class));
+                            finish();
+                        } else {
+                            Toast.makeText(Login.this, "Échec de la connexion", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 }
