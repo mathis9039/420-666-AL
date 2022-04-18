@@ -1,11 +1,15 @@
 package com.example.quiz;
 
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.QuerySnapshot;
+
 public class QuestionList {
 
-    private String question, option1, option2, option3, option4, answer;
-    private String  reponseUser;
+    public String questionID, question, option1, option2, option3, option4, answer;
+    public String  reponseUser;
 
-    public QuestionList(String question, String option1, String option2, String option3, String option4, String answer) {
+    public QuestionList(String questionID, String question, String option1, String option2, String option3, String option4, String answer) {
+        this.questionID = questionID;
         this.question = question;
         this.option1 = option1;
         this.option2 = option2;
@@ -15,7 +19,6 @@ public class QuestionList {
 
         this.reponseUser = "";
     }
-
 
     public String getQuestion() {
         return question;
