@@ -1,12 +1,12 @@
 package com.example.quiz;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 public class QuizResult extends AppCompatActivity {
 
@@ -28,12 +28,9 @@ public class QuizResult extends AppCompatActivity {
         String badRep = String.valueOf(getIncorrectAnswer);
         incorrectAnswer.setText("Mauvaise réponse: " + badRep);
 
-        acceuilBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(QuizResult.this, MainActivity.class));
-                finish();
-            }
+        acceuilBtn.setOnClickListener(view -> {
+            startActivity(new Intent(QuizResult.this, MainActivity.class));
+            finish();
         });
     }
 
