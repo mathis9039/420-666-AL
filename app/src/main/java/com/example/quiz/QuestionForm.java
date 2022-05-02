@@ -26,6 +26,7 @@ public class QuestionForm extends AppCompatActivity {
 
     private EditText question;
     private EditText reponse;
+    private EditText option1, option2, option3, option4;
     private Button ajoutQuestion;
     private String strQuestion, strReponse;
     private Dialog loadingDialog;
@@ -37,6 +38,11 @@ public class QuestionForm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_form);
+
+        option1 = (findViewById(R.id.option1));
+        option2 = (findViewById(R.id.option2));
+        option3 = (findViewById(R.id.option3));
+        option4 = (findViewById(R.id.option4));
 
         question = findViewById(R.id.question);
         options.add(findViewById(R.id.option1));
@@ -86,6 +92,13 @@ public class QuestionForm extends AppCompatActivity {
                 public void onCancelled(@NonNull DatabaseError error) {
                 }
             });
+
+            question.setText("");
+            reponse.setText("");
+            option1.setText("");
+            option2.setText("");
+            option3.setText("");
+            option4.setText("");
         });
 
         final ImageView backBtn = findViewById(R.id.retourBtn);
